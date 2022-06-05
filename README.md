@@ -32,3 +32,9 @@ sample `body.json`
     }
 }
 ```
+
+### Download File
+
+```bash
+curl '<s3-getObject-link>' --output test.mp4
+```
