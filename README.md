@@ -8,6 +8,7 @@ curl -X POST 'https://api.notion.com/v1/databases/<your db id>/query' \
   -H 'Notion-Version: 2022-02-22' \
   --data @body.json
 ```
+### Filter Checkbox Property
 sample `body.json`
 ```json
 {
@@ -15,6 +16,18 @@ sample `body.json`
         "property": "status",
         "checkbox": {
             "equals": true
+        }
+    }
+}
+```
+### Filter Select Property
+sample `body.json`
+```json
+{
+    "filter": {
+        "property": "status",
+        "select": {
+            "equals": "wait"
         }
     }
 }
